@@ -5,6 +5,8 @@ The "ESP32-2432S028R", an ESP32 with a built in 320 x 240 2.8" LCD display with 
 
 In order to gather bluetooth data, you will need a separate ESP32 device (basic no display one) as enabling BLE tracking on the CYD will cause the display to crash.
 
+I have tried several TPMS monitors for my RV and I have found the TireLinc to be the most reliable (although most expensive) monitors. 
+
 
 **Files:**
 
@@ -56,19 +58,28 @@ Displays current and 4 day weather forcast
 
 Home assistant device
 ESP32-C3 Development Board (for bluetooth)
+![esp32-c3-devkitm-1](https://github.com/user-attachments/assets/443c235f-3250-4747-b80d-684a30d5530f)
+
 ESP32-2432S028R
+![2432s](https://github.com/user-attachments/assets/948de2d3-8d15-4942-b361-7029f41de4b7)
+
 LCI ESP-01 4 Channel 12 Volt Relay (Optional)
+![lci-4ch](https://github.com/user-attachments/assets/30f1ed1b-303c-4b85-96c2-8f4dedeaf7bc)
 
 
 **Items Integrated:**
 
 Power Watchdog EPO Power Management / Surge Supressor
+![hu87fr_11](https://github.com/user-attachments/assets/23e95754-7918-4f00-b113-1255e31b0d75)
 
 TireLinc TPMS Sensors
+![tirelinc](https://github.com/user-attachments/assets/60594e8f-3004-42de-9196-458a7e42f593)
 
 Mopeka Standard Check Propane Sensors
+![107376_Mopeka_Standard Gas](https://github.com/user-attachments/assets/59be7ba3-2cf2-4ebb-be9a-f0c78c1c2ed8)
 
 Tuya Wifi Temperature / Humidity
+![tyua](https://github.com/user-attachments/assets/d8099941-4a2e-4993-aefd-0c33f30b64d3)
 
 
 **Home Assistant Integrations Needed:**
