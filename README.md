@@ -37,21 +37,24 @@ The middle of the display shows my power usage and propane tank levels.
 
 The bottom of the main display shows current inside and outside temperatures.
 
-![IMG_7405](https://github.com/user-attachments/assets/32129d0c-295d-4515-8cb6-4885ce547919)
+![IMG_7405](https://github.com/user-attachments/assets/8bf408c5-6fdf-4618-94d2-2ed6c29ca7c8)
+
 
 
 **Second Screen:**
 
 Displays my current TireLinc TMPS pressures
 
-![IMG_7407](https://github.com/user-attachments/assets/295d0e1f-ffa7-4dc0-8eb6-40c95cfa1e5d)
+![IMG_7407](https://github.com/user-attachments/assets/a21dfff6-c1f3-4159-9713-64c535e80df8)
+
 
 
 **Third Screen:**
 
 Displays current and 4 day weather forcast
 
-![IMG_7406](https://github.com/user-attachments/assets/e64a2d67-31b7-44e5-8f60-156db43d736b)
+![IMG_7406](https://github.com/user-attachments/assets/64957465-87f1-45f0-b31c-aa1e3af11b97)
+
 
 
 **Items Needed:**
@@ -59,34 +62,35 @@ Displays current and 4 day weather forcast
 Home assistant device
 ESP32-C3 Development Board (for bluetooth)
 
-![esp32-c3-devkitm-1](https://github.com/user-attachments/assets/443c235f-3250-4747-b80d-684a30d5530f)
+![esp32-c3-devkitm-1](https://github.com/user-attachments/assets/516e3863-e476-4962-9d3c-00f6c93e7a04)
 
 ESP32-2432S028R
 
-![2432s](https://github.com/user-attachments/assets/948de2d3-8d15-4942-b361-7029f41de4b7)
+![2432s](https://github.com/user-attachments/assets/57d84bd8-06b5-45b9-ac06-d82c7f45426a)
+
 
 LCI ESP-01 4 Channel 12 Volt Relay (Optional)
 
-![lci-4ch](https://github.com/user-attachments/assets/30f1ed1b-303c-4b85-96c2-8f4dedeaf7bc)
+![lci-4ch](https://github.com/user-attachments/assets/ec4de490-5324-4654-ac92-51b990f24b45)
 
 
 **Items Integrated:**
 
 Power Watchdog EPO Power Management / Surge Supressor
 
-![hu87fr_11](https://github.com/user-attachments/assets/23e95754-7918-4f00-b113-1255e31b0d75)
+![hu87fr_11](https://github.com/user-attachments/assets/996e5353-9bb8-4d2e-9860-f8f7e5edb54d)
 
 TireLinc TPMS Sensors
 
-![tirelinc](https://github.com/user-attachments/assets/60594e8f-3004-42de-9196-458a7e42f593)
+![tirelinc](https://github.com/user-attachments/assets/8aa58d1a-8bad-4acb-ad42-d7332d56a793)
 
 Mopeka Standard Check Propane Sensors
 
-![107376_Mopeka_Standard Gas](https://github.com/user-attachments/assets/59be7ba3-2cf2-4ebb-be9a-f0c78c1c2ed8)
+![107376_Mopeka_Standard Gas](https://github.com/user-attachments/assets/ff91f4cc-75e8-44cb-a29b-9a60e55be185)
 
 Tuya Wifi Temperature / Humidity
 
-![tyua](https://github.com/user-attachments/assets/d8099941-4a2e-4993-aefd-0c33f30b64d3)
+![tyua](https://github.com/user-attachments/assets/f1589158-1044-4f94-82a0-ce956198b0fb)
 
 
 **Home Assistant Integrations Needed:**
