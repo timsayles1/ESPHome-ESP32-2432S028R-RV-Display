@@ -35,15 +35,21 @@ The middle of the display shows my power usage and propane tank levels.
 
 The bottom of the main display shows current inside and outside temperatures.
 
+![IMG_7405](https://github.com/user-attachments/assets/32129d0c-295d-4515-8cb6-4885ce547919)
+
 
 **Second Screen:**
 
 Displays my current TireLinc TMPS pressures
 
+![IMG_7407](https://github.com/user-attachments/assets/295d0e1f-ffa7-4dc0-8eb6-40c95cfa1e5d)
+
 
 **Third Screen:**
 
 Displays current and 4 day weather forcast
+
+![IMG_7406](https://github.com/user-attachments/assets/e64a2d67-31b7-44e5-8f60-156db43d736b)
 
 
 **Items Needed:**
