@@ -1,0 +1,144 @@
+  - trigger:
+      platform: time_pattern
+      minutes: "/1"
+    action: 
+      - action: weather.get_forecasts
+        data:
+          type: daily
+        target:
+          entity_id: weather.forecast_home
+        response_variable: daily
+    sensor:
+      - name: LCD Display Data
+        unique_id: "template.lcd_data"
+        state: "OK"
+        attributes:
+          current_location: >
+           {{ states('sensor.location') }}
+           
+          left_tank_level: >
+           {{ states('sensor.esp_32_ble_receiver_left_tank_level') }}
+           
+          right_tank_level: >
+            {{ states('sensor.esp_32_ble_receiver_right_tank_level') }}
+           
+          extra_tank_level: >
+            {{ states('sensor.esp_32_ble_receiver_extra_tank_level') }}
+            
+          inside_temperature: >
+            {{ states('sensor.375fam_temperature_humidity_sensor_temperature') | round }}
+          
+          tirelinc_1: >
+            {{ states('sensor.tirelinc_313a_tire_1_pressure') }}
+            
+          tirelinc_2: >
+            {{ states('sensor.tirelinc_313a_tire_2_pressure') }}
+            
+          tirelinc_3: >
+            {{ states('sensor.tirelinc_313a_tire_3_pressure') }}
+            
+          tirelinc_4: >
+            {{ states('sensor.tirelinc_313a_tire_4_pressure') }}
+            
+          watchdog_current_1: >
+            {{ states('sensor.watchdog_current_line_1') }}
+            
+          watchdog_current_2: >
+            {{ states('sensor.watchdog_current_line_2') }}
+          
+          watchdog_total_amps: >
+            {{ states('sensor.total_watchdog_amps') }}
+            
+          watchdog_power_usage: >
+            {{ states('sensor.watchdog_power') }}
+            
+          weather_condition_now: >
+            {% set cond_now = states('weather.forecast_home') %}
+            {% if states('sun.sun') == 'below_horizon' %}
+                {% if cond_now == 'sunny' %} night {% elif cond_now == 'partlycloudy' %} night-partly-cloudy {% else %} {{ cond_now }} {% endif %}
+            {% else %}
+                {{ cond_now }}
+            {% endif %}
+          
+          weather_temperature_now: >
+            {{ state_attr('weather.forecast_home', 'temperature') | round }}
+            
+          weather_condition_0: >
+            {% set cond0 = daily['weather.forecast_home'].forecast[1].condition %}
+            {% set next_setting = as_timestamp(state_attr('sun.sun', 'next_setting')) %}
+            {% set next_rising = as_timestamp(state_attr('sun.sun', 'next_rising')) %}
+            {% set cond0_time = as_timestamp(daily['weather.forecast_home'].forecast[1].datetime) %}
+            {% if cond0_time < next_rising and next_rising < next_setting %}
+                {% if cond0 == 'sunny' %} night {% elif cond0 == 'partlycloudy' %} night-partly-cloudy {% else %} {{ cond0 }} {% endif %}
+            {% else %}
+                {{ cond0 }}
+            {% endif %}
+          
+          weather_temperature_0: >
+            {{ daily['weather.forecast_home'].forecast[1].temperature | round }}
+            
+          weather_temperature_low_0: >  
+            {{ daily['weather.forecast_home'].forecast[1].templow | round }}
+          
+          weather_timestamp_0: >
+            {{ as_timestamp(daily['weather.forecast_home'].forecast[1].datetime) | timestamp_custom('%a') }} {{ as_timestamp(daily['weather.forecast_home'].forecast[1].datetime) | timestamp_custom('%d') }}
+
+          weather_condition_1: >
+            {% set cond1 = daily['weather.forecast_home'].forecast[2].condition %}
+            {% set next_setting = as_timestamp(state_attr('sun.sun', 'next_setting')) %}
+            {% set next_rising = as_timestamp(state_attr('sun.sun', 'next_rising')) %}
+            {% set cond1_time = as_timestamp(daily['weather.forecast_home'].forecast[2].datetime) %}
+            {% if cond1_time < next_rising and next_rising < next_setting %}
+                {% if cond1 == 'sunny' %} night {% elif cond1 == 'partlycloudy' %} night-partly-cloudy {% else %} {{ cond1 }} {% endif %}
+            {% else %}
+                {{ cond1 }}
+            {% endif %}
+          
+          weather_temperature_1: >
+            {{ daily['weather.forecast_home'].forecast[2].temperature | round }}
+          
+          weather_temperature_low_1: >
+            {{ daily['weather.forecast_home'].forecast[2].templow | round }}
+            
+          weather_timestamp_1: >
+            {{ as_timestamp(daily['weather.forecast_home'].forecast[2].datetime) | timestamp_custom('%a') }} {{ as_timestamp(daily['weather.forecast_home'].forecast[2].datetime) | timestamp_custom('%d') }}
+
+          weather_condition_2: >
+            {% set cond2 = daily['weather.forecast_home'].forecast[3].condition %}
+            {% set next_setting = as_timestamp(state_attr('sun.sun', 'next_setting')) %}
+            {% set next_rising = as_timestamp(state_attr('sun.sun', 'next_rising')) %}
+            {% set cond2_time = as_timestamp(daily['weather.forecast_home'].forecast[3].datetime) %}
+            {% if cond2_time < next_rising and next_rising < next_setting %}
+                {% if cond2 == 'sunny' %} night {% elif cond2 == 'partlycloudy' %} night-partly-cloudy {% else %} {{ cond2 }} {% endif %}
+            {% else %}
+                {{ cond2 }}
+            {% endif %}
+            
+          weather_temperature_2: >
+            {{ daily['weather.forecast_home'].forecast[3].temperature | round }}
+            
+          weather_temperature_low_2: >
+            {{ daily['weather.forecast_home'].forecast[3].templow | round }}
+            
+          weather_timestamp_2: >
+            {{ as_timestamp(daily['weather.forecast_home'].forecast[3].datetime) | timestamp_custom('%a') }} {{ as_timestamp(daily['weather.forecast_home'].forecast[3].datetime) | timestamp_custom('%d') }}
+
+          weather_condition_3: >
+            {% set cond3 = daily['weather.forecast_home'].forecast[4].condition %}
+            {% set next_setting = as_timestamp(state_attr('sun.sun', 'next_setting')) %}
+            {% set next_rising = as_timestamp(state_attr('sun.sun', 'next_rising')) %}
+            {% set cond3_time = as_timestamp(daily['weather.forecast_home'].forecast[4].datetime) %}
+            {% if cond3_time < next_rising and next_rising < next_setting %}
+                {% if cond3 == 'sunny' %} night {% elif cond3 == 'partlycloudy' %} night-partly-cloudy {% else %} {{ cond3 }} {% endif %}
+            {% else %}
+                {{ cond3 }}
+            {% endif %}
+            
+          weather_temperature_3: >
+            {{ daily['weather.forecast_home'].forecast[4].temperature | round }}
+            
+          weather_temperature_low_3: >
+            {{ daily['weather.forecast_home'].forecast[4].templow | round }}
+            
+          weather_timestamp_3: >
+            {{ as_timestamp(daily['weather.forecast_home'].forecast[4].datetime) | timestamp_custom('%a') }} {{ as_timestamp(daily['weather.forecast_home'].forecast[4].datetime) | timestamp_custom('%d') }}
