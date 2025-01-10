@@ -6,7 +6,7 @@ The "ESP32-2432S028R", an ESP32 with a built in 320 x 240 2.8" LCD display with 
 In order to gather bluetooth data, you will need a separate ESP32 device (basic no display one) as enabling BLE tracking on the CYD will cause the display to crash.
 
 
-Files:
+**Files:**
 
 templates.yaml - Accumulates all the data from various sensors to send to the LCD display. Not 100% needed as you can code the sensors directly into the ESPHome code instead.
 
@@ -23,12 +23,12 @@ lci-4ch-relay.yaml - EspHome code for the LCI 4 Channel 12 Volt ESP-01 Relay.
 /fonts/ - Fonts you need to upload to EspHome for LCD Display.
 
 
-The display performs the following functionality:
+**The display performs the following functionality:**
 
 Using my Starlink satellite, I am able to obtain the GPS Longitude and Latitude for my exact location. I am able to feed the coordinates to geocode my location as well as update weather information.
 
 
-Main Screen:
+**Main Screen:**
 The display allows 3 button controls at the top of the main screen. I am controlling two LED lights via a ESP-01 4 channel relay as well as arming my Blink security camers.
 
 The middle of the display shows my power usage and propane tank levels.
@@ -36,17 +36,17 @@ The middle of the display shows my power usage and propane tank levels.
 The bottom of the main display shows current inside and outside temperatures.
 
 
-Second Screen:
+**Second Screen:**
 
 Displays my current TireLinc TMPS pressures
 
 
-Third Screen:
+**Third Screen:**
 
 Displays current and 4 day weather forcast
 
 
-Items Needed:
+**Items Needed:**
 
 Home assistant device
 ESP32-C3 Development Board (for bluetooth)
@@ -54,7 +54,7 @@ ESP32-2432S028R
 LCI ESP-01 4 Channel 12 Volt Relay (Optional)
 
 
-Items Integrated:
+**Items Integrated:**
 
 Power Watchdog EPO Power Management / Surge Supressor
 
@@ -65,7 +65,7 @@ Mopeka Standard Check Propane Sensors
 Tuya Wifi Temperature / Humidity
 
 
-Home Assistant Integrations Needed:
+**Home Assistant Integrations Needed:**
 
 
 HACS - TireLinc integration (TireLinc TMPS Integration)
