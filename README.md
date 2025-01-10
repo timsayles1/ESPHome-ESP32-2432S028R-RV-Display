@@ -1,2 +1,52 @@
 # ESPHome-ESP32-2432S028R-RV-Display
 RV Specific display panel for the CYD ESP32-2432S028R LCD
+
+The "ESP32-2432S028R", an ESP32 with a built in 320 x 240 2.8" LCD display with touch screen, is colloquially known as the "Cheap Yellow Display" or CYD. It's about $15 delivered and offers an easy, no-solder touch display to control your smart home. It is supported in ESPHome and can be used to easily visualize Home Assistant entities and control Home Assistant itself, straight out of the box. 
+
+The display performs the following functionality:
+
+Using my Starlink satellite, I am able to obtain the GPS Longitude and Latitude for my exact location. I am able to feed the coordinates to geocode my location as well as update weather information.
+
+Main Screen:
+The display allows 3 button controls at the top of the main screen. I am controlling two LED lights via a ESP-01 4 channel relay as well as arming my Blink security camers.
+The middle of the display shows my power usage and propane tank levels.
+The bottom of the main display shows current inside and outside temperatures.
+
+Second Screen:
+Displays my current TireLinc TMPS pressures
+
+Third Screen:
+Displays current and 4 day weather forcast
+
+Items Needed:
+
+Home assistant device
+ESP32-C3 Development Board (for bluetooth)
+ESP32-2432S028R
+
+Items Integrated:
+
+Power Watchdog EPO Power Management / Surge Supressor
+TireLinc TPMS Sensors
+Mopeka Standard Check Propane Sensors
+Tuya Wifi Temperature / Humidity
+
+Home Assistant Integrations Needed:
+
+HACS - TireLinc integration (TireLinc TMPS Integration)
+  https://github.com/k3vmcd/tirelinc
+
+HACS - ARVEE (Timezone Geolocation via long/lat)
+  https://github.com/mikegoubeaux/hass-arvee-timezonefinderL
+
+HACS - Google Geocode (Location Geocode via long/lat)
+  https://github.com/gregoryduckworth/GoogleGeocode-HASS
+
+Home Assistant Integration - StarLink
+
+Home Assistant Integration - Tuya
+
+Home Assistant Integration - Met.No
+
+
+Home Assistant Add-on - EspHome
