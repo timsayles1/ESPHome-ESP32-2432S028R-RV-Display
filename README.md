@@ -82,7 +82,7 @@ TireLinc TPMS Sensors
 
 Mopeka Standard Check Propane Sensors
 
-![107376_Mopeka_Standard Gas](https://github.com/user-attachments/assets/59be7ba3-2cf2-4ebb-be9a-f0c78c1c2ed8 =250x250)
+![107376_Mopeka_Standard Gas](https://github.com/user-attachments/assets/59be7ba3-2cf2-4ebb-be9a-f0c78c1c2ed8)
 
 Tuya Wifi Temperature / Humidity
 
