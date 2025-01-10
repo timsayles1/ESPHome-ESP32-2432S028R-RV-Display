@@ -6,6 +6,7 @@ The "ESP32-2432S028R", an ESP32 with a built in 320 x 240 2.8" LCD display with 
 Files:
 templates.yaml - Accumulates all the data from various sensors to send to the LCD display. Not 100% needed as you can code the sensors directly into the ESPHome code instead.
 sensors.yaml - Settings for Google Geocode integration to pull from Starlink.
+automations.yaml - Automations to update longitude and latitude for Home Assistant and ARVEE from Starlink location.
 
 
 The display performs the following functionality:
