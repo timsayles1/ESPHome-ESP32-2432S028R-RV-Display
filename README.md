@@ -6,12 +6,20 @@ The "ESP32-2432S028R", an ESP32 with a built in 320 x 240 2.8" LCD display with 
 In order to gather bluetooth data, you will need a separate ESP32 device (basic no display one) as enabling BLE tracking on the CYD will cause the display to crash.
 
 Files:
+
 templates.yaml - Accumulates all the data from various sensors to send to the LCD display. Not 100% needed as you can code the sensors directly into the ESPHome code instead.
+
 sensors.yaml - Settings for Google Geocode integration to pull from Starlink.
+
 automations.yaml - Automations to update longitude and latitude for Home Assistant and ARVEE from Starlink location.
+
 esp-32-ble.yaml - EspHome code for the ESP32-C3 Dev Board as bluetooth receiver and proxy.
+
 esp-32-display.yaml - EspHome code for the CYD LCD display.
 
+lci-4ch-relay.yaml - EspHome code for the LCI 4 Channel 12 Volt ESP-01 Relay.
+
+/fonts/ - Fonts you need to upload to EspHome for LCD Display.
 
 The display performs the following functionality:
 
