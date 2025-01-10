@@ -1,0 +1,21 @@
+- alias: Update Home Zone
+  description: Update home zone location
+  triggers:
+  - minutes: /10
+    trigger: time_pattern
+  conditions: []
+  actions:
+  - data_template:
+      latitude: '{{ state_attr(''device_tracker.starlink_device_location'', ''latitude'')
+        }}
+
+        '
+      longitude: '{{ state_attr(''device_tracker.starlink_device_location'', ''longitude'')
+        }}
+
+        '
+    action: homeassistant.set_location
+  - data_template:
+      latitude: '{{ state_attr(''device_tracker.starlink_device_location'', ''latitude'') }}'
+      longitude: '{{ state_attr(''device_tracker.starlink_device_location'', ''longitude'') }}'
+    action: arvee.set_geo_timezone
