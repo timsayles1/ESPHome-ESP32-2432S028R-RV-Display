@@ -18,7 +18,7 @@ esp-32-ble.yaml - EspHome code for the ESP32-C3 Dev Board as bluetooth receiver 
 
 esp-32-display.yaml - EspHome code for the CYD LCD display.
 
-lci-4ch-relay.yaml - EspHome code for the LCI 4 Channel 12 Volt ESP-01 Relay.
+lci-4ch-relay.yaml - EspHome code for the LCI 4 Channel 12 Volt ESP-01 Relay. After initial programming you will need to press the S1 button.
 
 /fonts/ - Fonts you need to upload to EspHome for LCD Display.
 
